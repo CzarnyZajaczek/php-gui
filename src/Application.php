@@ -283,6 +283,23 @@ class Application
                 case 'i386':
                     $processName = './phpgui-i386-linux';
                     break;
+                case 'arm':
+                case 'aarch64_be':
+                case 'aarch64':
+                case 'armv8b':
+                case 'armv8l':
+                    $processName = './phpgui-arm-linux';
+                    break;
+                case 'ppc':
+                case 'ppc64':
+                case 'ppcle':
+                case 'ppc64le':
+                    $processName = './phpgui-powerpc-linux';
+                    break;
+                case 'sparc':
+                case 'sparc64':
+                    $processName = './phpgui-sparc-linux';
+                    break;
                 default:
                     throw new \RuntimeException('Operational System architecture not identified by PHP-GUI.');
                     break;
